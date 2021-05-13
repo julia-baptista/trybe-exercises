@@ -1,0 +1,40 @@
+body {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+ul {
+    background-color: palevioletred;
+}
+
+li {
+    text-decoration: underline;
+}
+
+.destaque {
+    color: rgb(16, 102, 91)
+}
+
+p {
+    font-weight: 600px;
+    font-size: 3em;
+    font-family: 'KoHo', sans-serif;
+}
+
+.amarelo {
+    background-color: yellow;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.marrom {
+    background-color: brown;
+}
