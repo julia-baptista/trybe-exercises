@@ -1,40 +1,41 @@
-body {
-    font-size: 16px;
+.super-mario, .goomba, .bowser, .baloon, .word {
+    position: absolute;
 }
 
-h1 {
-    font-size: 65px;
-    color: orange;
-    font-family: sans-serif;
-    text-align: center;
+.super-mario, .goomba, .bowser {
+    width: 250px;
+    left: 150px;
 }
 
-ul {
-    background-color: palevioletred;
+.super-mario {
+    top: 100px;
+    z-index: 1;
+    transition: 2s;
 }
 
-li {
-    text-decoration: underline;
+.super-mario:hover {
+    width: 500px;
 }
 
-.destaque {
-    color: rgb(16, 102, 91)
+.goomba {
+    top: 500px;
+    z-index: 1;
 }
 
-p {
-    font-weight: 600px;
-    font-size: 3em;
-    font-family: 'KoHo', sans-serif;
+.bowser {
+    top: 980px;
+    z-index: 1;
 }
 
-.amarelo {
-    background-color: yellow;
+.baloon {
+    z-index: 2;
+    width: 200px;
+    left: 20px;
+    top: 880px;
 }
 
-.vermelho {
-    background-color: red;
-}
-
-.marrom {
-    background-color: brown;
+.word {
+    z-index: 3;
+    left: 30px;
+    top: 910px;
 }
