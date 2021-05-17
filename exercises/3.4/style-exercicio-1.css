@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    width: 650px;
+    margin: 0 auto;
+}
+
+.tags ul, .description ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tags-group {
+    text-align: center;
+}
+
+.tags-group ul, .tags-group > ul > li  {
+    display: inline-block;
+}
+
+.first, .second, .third {
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+}
+
+.first {
+    background-color: rgb(235, 200, 84);
+    margin: 0 auto;
+}
+
+.second {
+    background-color: rgb(219, 219, 219);
+}
+
+.third {
+    background-color: rgb(170, 142, 106);
+}
+
+.description {
+    text-align: center;
+}
+
+.description-list, .description-list li {
+    display: inline-block
+}
+
