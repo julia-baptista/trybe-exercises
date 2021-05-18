@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #063678;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+article {
+    width: 70%;
+    float: left;
+    padding-right: 80px;
+}
+aside {
+    width: 30%;
+    float: right;
+}
+
+.main-header {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+}
+
+.main-header:before {
+    content: "";
+    background-image: url(background-image-see.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+    z-index: -1;;
+}
+
+.main-header-title {
+    border: 2px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 3em;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;
+}
+
+.main-nav {
+    background-color: #203461;
+    margin-bottom: 60px;
+}
+
+.main-nav ul {
+    text-align: center;
+}
+
+.main-nav li {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.main-nav li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    display: block;
+    transition: 0.2s ease-in-out;
+}
+
+.main-nav li a:hover {
+    background-color: #ade8f4;
+    color: #203461;
+}
+
+.section-article {
+    margin-bottom: 60px;
+}
+
+h2 {
+    text-align: center;
+    color: #ff6700;
+    margin-bottom: 80px;
+    font-size: 3.5em;
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+
+.first-article {
+    padding-top: 40px;
+}
+
+.first-img {
+    display: block;
+    width: 55%;
+    float: left;
+    margin-right: 40px;
+}
+
+.cientific-table, .cientific-table td, .cientific-table th {
+    border: 1px solid #063678;
+    text-align: left;
+}
+
+.cientific-table td, .cientific-table th {
+    padding: 5px 10px;
+}
+
+
+.img-article {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* a formatação desse botão eu copiei do site https://www.animalplanetmagazine.com/ */
+
+.button {
+    background-color: #ff6700;
+    border: 2px solid #ff6700;
+    border-radius: 30px;
+    box-shadow: 8px 8px 23px rgb(0 0 0 / 50%);
+    color: #fff;
+    display: inline-block;
+    font-family: 'Arial Rounded MT Bold', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2em;
+    padding: 1.218em 3em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #ff6700;
+}
+
+
+
+
+.section-bibliografia {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: rgba(173, 232, 244, 0.685);
+}
+
+footer {
+    background-color: #203461;
+    color: #fff;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
