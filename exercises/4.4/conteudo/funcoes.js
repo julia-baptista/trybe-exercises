@@ -27,7 +27,11 @@ function girarVolante(anguloRotacao) {
   return rotacaoDoVolante + "°";
 }
 
+function myfunctionName(a){
 
+  alert(a);
+  
+}
 
 
 
