@@ -31,6 +31,7 @@ for(let key in pizzas) {
 }
 
 console.log('----------------------------------')
+console.log('-------------pizzas[key]---------------------')
 
 for(let key in pizzas) {
   console.log(pizzas[key]);
