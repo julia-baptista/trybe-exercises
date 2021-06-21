@@ -94,25 +94,6 @@ defaultValidation();
 console.log(errorMessages);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function validarData(input) {
   if(input.value.length === 0) {
 
@@ -138,11 +119,6 @@ function clearFields() {
     userTexrarea.value = '';
   }
 }
-
-
-
-
-
 window.onload = function() {
 
   const submitButton = document.querySelector('.submit-button');
