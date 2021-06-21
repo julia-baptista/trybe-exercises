@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  div {
+    width: 300px;
+    min-height: 70px;
+    border: 1px solid blue;
+    margin: 20px;
+  }
+
+  p {
+    background-color: red;
+    border: 1px solid black;
+    color: white;
+  }
+
+  /* .p-diferente {
+    height: 50px;
+  } */
+
+  .teste-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    /* justify-content: flex-end; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+    /* align-items: stretch; */
+    /* align-items: flex-start; */
+    align-items: flex-end;
+    /* align-items: center; */
+    /* align-items: baseline; */
+    /* align-content: stretch; */
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    align-content: space-between;
+    /* align-content: space-around; */
+  }
+
+  .teste-flex-2 {
+    display: flex;
+    flex-flow: column wrap;
+    height: 200px;
+    /* justify-content: center; */
+    /* justify-content: flex-end; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    justify-content: center;
+  }
+
+</style>
+
+
+
+
+<body>
+
+<!-- align-items: ajusta os itens sem controle entre as diferentes linhas e colunas criadas. -->
+
+<!-- align-content: ajusta o espaçamento entre as linhas. -->
+
+<h1>Aprendendo Flexbox</h1>
+
+<h2>Flex</h2>
+
+<div class="teste-flex">
+  <p>1 - Tamires Nunes</p>
+  <p class="p-diferente">2 - Licas Ferraz</p>
+  <p>3 - Gabriel Oliva</p>
+</div>
+
+<div class="teste-flex-2">
+  <p>1 - Tamires Nunes</p>
+  <p>2 - Licas Ferraz</p>
+  <p>3 - Gabriel Oliva</p>
+</div>
+
+  
+</body>
+</html>
