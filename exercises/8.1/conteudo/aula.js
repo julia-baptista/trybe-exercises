@@ -1,0 +1,7 @@
+// filho.obedecerMae(tarefasQueMaePassou);
+
+
+
+
+
+
