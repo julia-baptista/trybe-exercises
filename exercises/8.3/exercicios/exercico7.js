@@ -27,7 +27,7 @@ const books = [
     genre: 'Ficção Científica',
     author: {
       name: 'Isaac Asimov',
-      birthYear: 1921,
+      birthYear: 1920,
     },
     releaseYear: 1951,
   },
@@ -63,45 +63,31 @@ const books = [
   },
 ];
 
-// 7. Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
+// 7. Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
 
-const expectedResult = false;
+// Dica: cada inicial termina com um ponto.
 
-function authorUnique() {
+const expectedResult = 'O Senhor dos Anéis';
 
-  let result = true;
-
-  books.forEach((book1) => {
-    const fistDate = book1.author.birthYear;
-    const fistName = book1.author.name;
-    books.forEach((book2) => {
-      const secondDate = book2.author.birthYear;
-      const secondtName = book2.author.name;
-      if (fistDate === secondDate && secondtName !== fistName ) {
-        result = false;
-      }
-    })
-  })
-
-  return result;
+function authorWith3DotsOnName() {
+  // let regex = /^\D\.\s{3}/;
+  return books.find(book => book.author.name.match((/^\D\.\s\D\.\s\D\.\s/))).name;
 }
 
-console.log(authorUnique());
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
 
-// assert.strictEqual(authorUnique(), expectedResult);
+/*************************************************************
+Gabarito:
 
-// faltou exluir a comparação do mesmo autor
+const expectedResult = 'O Senhor dos Anéis';
 
-/*************************************************************************
- 
-function authorUnique() {
-  return books.every((book) =>
-    !books.some((bookSome) =>
-      (bookSome.author.birthYear === book.author.birthYear)
-      && (bookSome.author.name !== book.author.name)));
+function authorWith3DotsOnName() {
+  return books.find((book) => (
+    book.author.name.split(' ').filter((word) => word.endsWith('.')).length === 3
+  )).name;
 }
 
-**************************************************************************/
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
 
 
-
+**************************************************************/

@@ -27,7 +27,7 @@ const books = [
     genre: 'Ficção Científica',
     author: {
       name: 'Isaac Asimov',
-      birthYear: 1921,
+      birthYear: 1920,
     },
     releaseYear: 1951,
   },
@@ -63,45 +63,43 @@ const books = [
   },
 ];
 
-// 7. Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
+// 3. Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
 
-const expectedResult = false;
+const expectedResult = 43;
 
-function authorUnique() {
+function averageAge() {
+  const sumAges = books.reduce((acc, book) => {
+    return acc += (book.releaseYear - book.author.birthYear);
+  }, 0);
 
-  let result = true;
-
-  books.forEach((book1) => {
-    const fistDate = book1.author.birthYear;
-    const fistName = book1.author.name;
-    books.forEach((book2) => {
-      const secondDate = book2.author.birthYear;
-      const secondtName = book2.author.name;
-      if (fistDate === secondDate && secondtName !== fistName ) {
-        result = false;
-      }
-    })
-  })
-
-  return result;
+  return sumAges / books.length;
 }
 
-console.log(authorUnique());
+console.log(averageAge());
 
-// assert.strictEqual(authorUnique(), expectedResult);
+assert.strictEqual(averageAge(), expectedResult);
 
-// faltou exluir a comparação do mesmo autor
+/*****************************************************
+Gabrito:
 
-/*************************************************************************
- 
-function authorUnique() {
-  return books.every((book) =>
-    !books.some((bookSome) =>
-      (bookSome.author.birthYear === book.author.birthYear)
-      && (bookSome.author.name !== book.author.name)));
+function averageAge() {
+  const numberOfBooks = books.length;
+  const sumOfAges = books.reduce((sum, book) => (
+    sum + (book.releaseYear - book.author.birthYear)
+  ), 0);
+  return sumOfAges / numberOfBooks;
 }
 
-**************************************************************************/
+****************************************************/
+
+
+
+
+
+
+
+
+
 
 
 
