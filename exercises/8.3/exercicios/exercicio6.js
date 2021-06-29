@@ -27,7 +27,7 @@ const books = [
     genre: 'Ficção Científica',
     author: {
       name: 'Isaac Asimov',
-      birthYear: 1921,
+      birthYear: 1920,
     },
     releaseYear: 1951,
   },
@@ -63,45 +63,33 @@ const books = [
   },
 ];
 
-// 7. Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
+// 6. Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
 
-const expectedResult = false;
+const expectedResult = [
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
+];
 
-function authorUnique() {
-
-  let result = true;
-
-  books.forEach((book1) => {
-    const fistDate = book1.author.birthYear;
-    const fistName = book1.author.name;
-    books.forEach((book2) => {
-      const secondDate = book2.author.birthYear;
-      const secondtName = book2.author.name;
-      if (fistDate === secondDate && secondtName !== fistName ) {
-        result = false;
-      }
-    })
-  })
-
-  return result;
+function oldBooks() {
+  const date = new Date().getFullYear();
+  return books.filter(book => book.releaseYear < date - 60).map(book2 => book2.name);
 }
 
-console.log(authorUnique());
+assert.deepStrictEqual(oldBooks(), expectedResult);
 
-// assert.strictEqual(authorUnique(), expectedResult);
+/**************************************************************
+Gabraito:
 
-// faltou exluir a comparação do mesmo autor
-
-/*************************************************************************
- 
-function authorUnique() {
-  return books.every((book) =>
-    !books.some((bookSome) =>
-      (bookSome.author.birthYear === book.author.birthYear)
-      && (bookSome.author.name !== book.author.name)));
+function oldBooks() {
+  const currentYear = new Date().getFullYear();
+  return books
+    .filter((book) => currentYear - book.releaseYear > 60)
+    .map((book) => book.name);
 }
 
-**************************************************************************/
+*************************************************************/
+
 
 
 

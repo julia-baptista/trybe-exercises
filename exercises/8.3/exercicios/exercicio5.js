@@ -27,7 +27,7 @@ const books = [
     genre: 'Ficção Científica',
     author: {
       name: 'Isaac Asimov',
-      birthYear: 1921,
+      birthYear: 1920,
     },
     releaseYear: 1951,
   },
@@ -63,45 +63,33 @@ const books = [
   },
 ];
 
-// 7. Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
+// 5.  Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
 
-const expectedResult = false;
+const expectedResult = [
+  'Frank Herbert',
+  'George R. R. Martin',
+  'Isaac Asimov',
+  'J. R. R. Tolkien',
+];
 
-function authorUnique() {
-
-  let result = true;
-
-  books.forEach((book1) => {
-    const fistDate = book1.author.birthYear;
-    const fistName = book1.author.name;
-    books.forEach((book2) => {
-      const secondDate = book2.author.birthYear;
-      const secondtName = book2.author.name;
-      if (fistDate === secondDate && secondtName !== fistName ) {
-        result = false;
-      }
-    })
-  })
-
-  return result;
+function fantasyOrScienceFictionAuthors() {
+  return books.filter(book => book.genre === 'Ficção Científica' || book.genre === 'Fantasia').map(book2 => book2.author.name).sort();
 }
 
-console.log(authorUnique());
+assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
 
-// assert.strictEqual(authorUnique(), expectedResult);
+/**********************************************************
+ Gabraito:
 
-// faltou exluir a comparação do mesmo autor
-
-/*************************************************************************
- 
-function authorUnique() {
-  return books.every((book) =>
-    !books.some((bookSome) =>
-      (bookSome.author.birthYear === book.author.birthYear)
-      && (bookSome.author.name !== book.author.name)));
+function fantasyOrScienceFictionAuthors() {
+  const wantedGenres = ['Fantasia', 'Ficção Científica'];
+  return books
+    .filter((book) => wantedGenres.includes(book.genre))
+    .map((book) => book.author.name).sort();
 }
 
-**************************************************************************/
+***********************************************************/
+
 
 
 

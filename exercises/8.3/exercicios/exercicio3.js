@@ -27,7 +27,7 @@ const books = [
     genre: 'Ficção Científica',
     author: {
       name: 'Isaac Asimov',
-      birthYear: 1921,
+      birthYear: 1920,
     },
     releaseYear: 1951,
   },
@@ -63,45 +63,50 @@ const books = [
   },
 ];
 
-// 7. Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
+// 3. Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
 
-const expectedResult = false;
+// Dica: use as função filter;
 
-function authorUnique() {
 
-  let result = true;
+const expectedResult = [
+  { 
+    id: 1,
+    name: 'As Crônicas de Gelo e Fogo',
+    genre: 'Fantasia',
+    author: { name: 'George R. R. Martin', birthYear: 1948 },
+    releaseYear: 1991
+  },
+  {
+    id: 2,
+    name: 'O Senhor dos Anéis',
+    genre: 'Fantasia',
+    author: { name: 'J. R. R. Tolkien', birthYear: 1892 },
+    releaseYear: 1954
+  },
+  {
+    id: 3,
+    name: 'Fundação',
+    genre: 'Ficção Científica',
+    author: { name: 'Isaac Asimov', birthYear: 1920 },
+    releaseYear: 1951
+  },
+  {
+    id: 4,
+    name: 'Duna',
+    genre: 'Ficção Científica',
+    author: { name: 'Frank Herbert', birthYear: 1920 },
+    releaseYear: 1965
+  }
+];
 
-  books.forEach((book1) => {
-    const fistDate = book1.author.birthYear;
-    const fistName = book1.author.name;
-    books.forEach((book2) => {
-      const secondDate = book2.author.birthYear;
-      const secondtName = book2.author.name;
-      if (fistDate === secondDate && secondtName !== fistName ) {
-        result = false;
-      }
-    })
-  })
-
-  return result;
+function fantasyOrScienceFiction() {
+  return books.filter(book => book.genre === 'Ficção Científica' || book.genre === 'Fantasia');
 }
 
-console.log(authorUnique());
+assert.deepStrictEqual(fantasyOrScienceFiction(), expectedResult);
 
-// assert.strictEqual(authorUnique(), expectedResult);
 
-// faltou exluir a comparação do mesmo autor
 
-/*************************************************************************
- 
-function authorUnique() {
-  return books.every((book) =>
-    !books.some((bookSome) =>
-      (bookSome.author.birthYear === book.author.birthYear)
-      && (bookSome.author.name !== book.author.name)));
-}
-
-**************************************************************************/
 
 
 
