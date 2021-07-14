@@ -25,3 +25,6 @@ describe("a função verifyCredentials()", () => {
     );
   });  
 });
+
+
+
