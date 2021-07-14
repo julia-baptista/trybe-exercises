@@ -110,3 +110,15 @@ Esse comando irá criar a pasta node_modules e o arquivo package-lock.json .
 * package-lock.json é um arquivo que “trava” as versões das dependências. Quando outra pessoa executar npm install ou npm i para baixar as dependências, este arquivo garante que serão instaladas as mesmas versões para todo mundo.
 
 **********************************************************************/ 
+
+
+/********************************
+Macete:
+
+ "scripts": {
+    "test": "jest"
+    // "test": "jest --watch"
+    // "test": "jest --watchAll"
+  },
+
+*********************************/
